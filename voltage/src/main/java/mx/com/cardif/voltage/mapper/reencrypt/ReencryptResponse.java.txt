@@ -1,0 +1,15 @@
+package mx.com.cardif.voltage.mapper.reencrypt;
+
+import lombok.Data;
+
+/**
+ * @author Angel
+ *
+ * Metodo Response Reencrypt
+ */
+@Data
+public class ReencryptResponse {
+
+    // data
+    private String data;
+}

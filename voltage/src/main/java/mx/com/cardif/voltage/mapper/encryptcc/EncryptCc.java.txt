@@ -1,0 +1,13 @@
+package mx.com.cardif.voltage.mapper.encryptcc;
+
+import mx.com.cardif.voltage.mapper.decryptcc.ProtectionSettingsDecrypt;
+
+public class EncryptCc {
+
+    // data
+    private String data;
+
+    // protection Settings
+    private ProtectionSettingsDecrypt protectionSettings;
+
+}

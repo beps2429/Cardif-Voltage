@@ -1,0 +1,11 @@
+package mx.com.cardif.voltage.mapper.decryptcc;
+
+import lombok.Data;
+
+@Data
+public class DecryptCcResponse {
+
+    // data
+    private String data;
+
+}

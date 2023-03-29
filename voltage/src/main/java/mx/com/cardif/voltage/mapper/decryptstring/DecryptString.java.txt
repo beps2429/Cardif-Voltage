@@ -1,0 +1,10 @@
+package mx.com.cardif.voltage.mapper.decryptstring;
+
+public class DecryptString {
+
+    // data
+    private String data;
+
+    // protection Settings
+    private ProtectionSettingsDecryptString protectionSettings;
+}

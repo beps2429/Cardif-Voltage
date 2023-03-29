@@ -1,0 +1,24 @@
+package mx.com.cardif.voltage.controller;
+
+import mx.com.cardif.voltage.mapper.decryptcc.DecryptCc;
+import mx.com.cardif.voltage.mapper.decryptcc.DecryptCcResponse;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+    @RestController
+    @RequestMapping("v1/voltage/decrypt-cc")
+    public class DecryptCcController{
+
+        @PostMapping
+        @ResponseStatus(HttpStatus.CREATED)
+        public DecryptCcResponse crearDecryptCC(@RequestBody DecryptCc decryptCc) {
+
+            // Se crea el objeto EncryptResponse
+            DecryptCcResponse decryptCcResponse = new DecryptCcResponse();
+            // Se setea el valor del atributo
+            decryptCcResponse.setData("5");
+            // se retorna el objeto
+            return decryptCcResponse;
+
+        }
+}

@@ -1,0 +1,19 @@
+package mx.com.cardif.voltage.mapper.reencrypt;
+
+import lombok.Data;
+
+/**
+ * @author Angel
+ *
+ * Objeto del cuerpo del error
+ */
+@Data
+public class ReencryptResponseError {
+
+    // timestamp
+    private String timestamp;
+
+    // message
+    private String message;
+
+}

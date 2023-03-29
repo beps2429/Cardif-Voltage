@@ -1,0 +1,26 @@
+package mx.com.cardif.voltage.controller;
+
+import mx.com.cardif.voltage.mapper.reencryptcc.ReencryptCc;
+import mx.com.cardif.voltage.mapper.reencryptcc.ReencryptCcResponse;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("v1/cardif/voltage/re-encrypt-cc")
+public class ReencryptCcController {
+
+    // Método para crear una nueva reencriptacion-string
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public ReencryptCcResponse crearReencrypt(@RequestBody ReencryptCc reencryptCc) {
+
+        // Se crea el objeto ReencryptResponse
+        ReencryptCcResponse response = new ReencryptCcResponse();
+        // Se setea la info requerida
+        response.setPan("1223444555566666");
+        response.setCvv("123");
+        // Se retorna el objeto
+        return response;
+
+    }
+}

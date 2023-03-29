@@ -1,0 +1,13 @@
+package mx.com.cardif.voltage;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class VoltageApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

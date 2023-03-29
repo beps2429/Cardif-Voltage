@@ -1,0 +1,25 @@
+package mx.com.cardif.voltage.controller;
+
+import mx.com.cardif.voltage.mapper.encrypt.Encrypt;
+import mx.com.cardif.voltage.mapper.encrypt.EncryptResponse;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("v1/voltage/encrypt-string")
+public class EncryptController {
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public EncryptResponse crearEncrypt(@RequestBody Encrypt encrypt) {
+
+        // Se crea el objeto EncryptResponse
+        EncryptResponse response = new EncryptResponse();
+        // Se setea el valor del atributo
+        response.setData("5");
+        // se retorna el objeto
+        return response;
+
+    }
+
+}

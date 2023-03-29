@@ -1,0 +1,10 @@
+package mx.com.cardif.voltage.mapper.decryptcc;
+
+public class DecryptCcResponseError {
+
+    // timeStamp
+    private String timeStamp;
+
+    // message
+    private String message;
+}

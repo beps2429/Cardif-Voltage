@@ -1,0 +1,24 @@
+package mx.com.cardif.voltage.mapper.reencrypt;
+
+import lombok.Data;
+
+/**
+ * @author Angel
+ *
+ * Modelado del objeto PieReencrypt
+ */
+@Data
+public class PieReencrypt {
+
+    // mode
+    private String mode;
+
+    // merchantId;
+    private String merchantId;
+
+    // keyId;
+    private String keyId;
+
+    // phaseBit
+    private Integer phaseBit;
+}

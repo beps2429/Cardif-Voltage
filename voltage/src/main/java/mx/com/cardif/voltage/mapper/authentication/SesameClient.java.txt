@@ -1,0 +1,19 @@
+package mx.com.cardif.voltage.mapper.authentication;
+
+
+import mx.com.cardif.voltage.common.gen.LoginForApplicationIn;
+import mx.com.cardif.voltage.common.gen.LoginForApplicationInResponse;
+import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
+
+public class SesameClient extends WebServiceGatewaySupport {
+
+    public LoginForApplicationInResponse sesameLoginResponse(String login, String password, String applicationId){
+        LoginForApplicationIn sesameLoginRequest = new LoginForApplicationIn();
+        sesameLoginRequest.setLogin(login);
+        sesameLoginRequest.setPassword(password);
+        sesameLoginRequest.setApplicationId(applicationId);
+
+        return (LoginForApplicationInResponse) getWebServiceTemplate().marshalSendAndReceive(sesameLoginRequest);
+    }
+
+}

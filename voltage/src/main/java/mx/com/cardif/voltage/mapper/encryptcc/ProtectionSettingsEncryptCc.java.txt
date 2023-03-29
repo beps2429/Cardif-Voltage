@@ -1,0 +1,10 @@
+package mx.com.cardif.voltage.mapper.encryptcc;
+
+public class ProtectionSettingsEncryptCc {
+
+    // indentity
+    private String indentity;
+
+    // format name
+    private String formatName;
+}

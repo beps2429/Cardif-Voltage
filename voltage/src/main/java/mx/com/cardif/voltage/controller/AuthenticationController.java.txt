@@ -1,0 +1,26 @@
+package mx.com.cardif.voltage.controller;
+
+import mx.com.cardif.voltage.common.gen.LoginForApplicationIn;
+import mx.com.cardif.voltage.config.SoapConfig;
+import mx.com.cardif.voltage.mapper.authentication.SesameClient;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+public class AuthenticationController {
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public String authentication(@RequestBody LoginForApplicationIn sesameRequest) {
+        String login = "USUARIO";//Default Name
+        String pass = "PASSWORD";//Default Name
+        String applicationId = "SESAME";//Default Name
+
+        AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(SoapConfig.class);
+        SesameClient sesameClient = annotationConfigApplicationContext.getBean(SesameClient.class);
+        System.out.println(sesameClient.sesameLoginResponse(login, pass, applicationId));
+return "";
+    }
+}

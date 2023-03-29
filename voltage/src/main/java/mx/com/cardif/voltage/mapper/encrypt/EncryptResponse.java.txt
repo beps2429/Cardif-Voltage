@@ -1,0 +1,15 @@
+package mx.com.cardif.voltage.mapper.encrypt;
+
+import lombok.Data;
+
+/**
+ * @author Angel
+ *
+ * Modelado del objeto EncryptResponse
+ */
+@Data
+public class EncryptResponse {
+
+    // data
+    private String data;
+}

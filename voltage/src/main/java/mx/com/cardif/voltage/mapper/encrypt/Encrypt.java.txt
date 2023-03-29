@@ -1,0 +1,17 @@
+package mx.com.cardif.voltage.mapper.encrypt;
+
+import lombok.Data;
+
+/**
+ * @author Angel
+ * Modelo para el objeto encrypt
+ */
+@Data
+public class Encrypt {
+
+    // data
+    private String data;
+
+    // protection Settings
+    private ProtectionSettingsEncrypt protectionSettings;
+}

@@ -1,0 +1,19 @@
+package mx.com.cardif.voltage.mapper.reencryptcc;
+
+import lombok.Data;
+
+/**
+ * @author Angel
+ *
+ * Modelo del Objeto ReencryptCcResponse
+ */
+@Data
+public class ReencryptCcResponse {
+
+    // pan
+    private String pan;
+
+    // cvv
+    private String cvv;
+
+}

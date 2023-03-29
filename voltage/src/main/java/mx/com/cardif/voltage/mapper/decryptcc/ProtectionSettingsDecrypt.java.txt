@@ -1,0 +1,10 @@
+package mx.com.cardif.voltage.mapper.decryptcc;
+
+public class ProtectionSettingsDecrypt {
+
+    // indentity
+    private String indentity;
+
+    // format name
+    private String formatName;
+}

@@ -1,0 +1,18 @@
+package mx.com.cardif.voltage.mapper.reencrypt;
+
+import lombok.Data;
+
+/**
+ * @author Angel
+ *
+ * Modelo para los protection Settings del reencrypt
+ */
+@Data
+public class ProtectionSettingsReencrypt {
+
+    // identity
+    private String indentity;
+
+    // format Name
+    private String formatName;
+}

@@ -1,0 +1,19 @@
+package mx.com.cardif.voltage.mapper.reencryptcc;
+
+import lombok.Data;
+
+/**
+ * @author Angel
+ *
+ * Modelado de objeto ProtectionSettingsReencryptCc
+ */
+@Data
+public class ProtectionSettingsReencryptCc {
+
+    // indentity
+    private String indentity;
+
+    // formatName
+    private String formatName;
+
+}

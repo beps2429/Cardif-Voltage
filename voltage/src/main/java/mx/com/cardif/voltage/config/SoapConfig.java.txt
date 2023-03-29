@@ -1,0 +1,26 @@
+package mx.com.cardif.voltage.config;
+
+
+import mx.com.cardif.voltage.mapper.authentication.SesameClient;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.oxm.jaxb.Jaxb2Marshaller;
+@Configuration
+public class SoapConfig {
+
+    @Bean
+    public Jaxb2Marshaller marshaller(){
+        Jaxb2Marshaller marshaller= new Jaxb2Marshaller();
+        marshaller.setContextPath("mx.com.cardif.authentication.client.gen");
+        return marshaller;
+    }
+
+    @Bean
+    public SesameClient sesameClient(Jaxb2Marshaller marshaller){
+        SesameClient client = new SesameClient();
+        client.setDefaultUri("https://www.dataaccess.com/webservicesserver/NumberConversion.wso?wsdl");
+        client.setMarshaller(marshaller);
+        client.setUnmarshaller(marshaller);
+        return client;
+    }
+}
